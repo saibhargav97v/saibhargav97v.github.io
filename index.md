@@ -1,15 +1,22 @@
 ---
 layout: default
-title: Home
+title: Sai Bhargav Varanasi
 ---
 
-# Sai Bhargav Varanasi
+<nav style="display: flex; gap: 20px; margin-bottom: 30px; font-weight: bold;">
+  <a href="#experience" style="text-decoration: none; color: #0969da;">Experience</a>
+  <a href="#expertise" style="text-decoration: none; color: #0969da;">Expertise</a>
+  <a href="#education" style="text-decoration: none; color: #0969da;">Education</a>
+  <a href="https://github.com/saibhargav97v" target="_blank" style="text-decoration: none; color: #0969da;">GitHub</a>
+</nav>
+
 **Software Engineer @ Snowflake | Distributed Systems & Infrastructure**
 
 I build resilient infrastructure for **Snowflake's Control Plane**, managing millions of concurrent workloads. My work bridges the gap between high-performance distributed systems and large-scale data engineering.
 
 ---
 
+<div class="reveal" id="experience">
 ## 🚀 Core Impact
 
 ### **Snowflake** | Software Engineer
@@ -48,3 +55,33 @@ I build resilient infrastructure for **Snowflake's Control Plane**, managing mil
 * **MS in Computer Science** | Stony Brook University (GPA: 3.83)
 * **B.Tech in CS** | National Institute of Technology, Trichy (GPA: 9.0)
 * **Publication:** *B-MEG: Bottlenecked Microservices Extraction using Graph Neural Networks* (ACM 2022).
+</div>
+
+<style>
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      }
+    }
+  }
+  window.addEventListener("scroll", reveal);
+  // Trigger once on load
+  document.addEventListener("DOMContentLoaded", reveal);
+</script>
