@@ -1,3 +1,4 @@
-remote_theme: pages-themes/minimal@v0.2.0
-plugins:
-  - jekyll-remote-theme
+theme: jekyll-theme-minimal
+title: Sai Bhargav Varanasi
+description: Software Engineer @ Snowflake | Distributed Systems
+# No plugins required for native themes
